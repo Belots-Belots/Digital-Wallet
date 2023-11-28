@@ -70,12 +70,117 @@ h2 {
   font-size: calc(var(--responsiveUnit) * 1);
 }
 
+.content {
+  background: var(--success);
+  color: var(--dark);
+  padding: calc(var(--responsiveUnit) * 1);
+  border-radius: calc(var(--responsiveUnit) * 0.5);
+  font-family: sans-serif;
+  width: calc(var(--responsiveUnit) * 50);
+  height: 100%;
+  margin-block: calc(var(--responsiveUnit) * 0.5);
+}
+
+.customInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light);
+  padding: calc(var(--responsiveUnit) * 1);
+  border-radius: calc(var(--responsiveUnit) * 0.5);
+  margin: calc(var(--responsiveUnit) * 0.5);
+  height: calc(var(--responsiveUnit) * 4);
+}
+
+.customInput label {
+  width: 40%;
+  text-align: left;
+  padding: calc(var(--responsiveUnit) * 0.5);
+  font-size: calc(var(--responsiveUnit) * 1.2);
+  font-weight: bolder;
+}
+
+.customInput input {
+  width: 60%;
+  padding: calc(var(--responsiveUnit) * 0.5);
+  border-radius: calc(var(--responsiveUnit) * 0.5);
+  border: none;
+  outline: none;
+  background: var(--dark);
+  color: var(--light);
+  font-size: calc(var(--responsiveUnit) * 1.5);
+  font-weight: bolder;
+}
+
+button {
+  width: calc(100% - calc(var(--responsiveUnit) * 1));
+  background: var(--dark);
+  color: var(--success);
+  padding: calc(var(--responsiveUnit) * 0.5);
+  border-radius: calc(var(--responsiveUnit) * 0.5);
+  border: none;
+  outline: none;
+  font-size: calc(var(--responsiveUnit) * 1.5);
+  font-weight: bolder;
+  margin: calc(var(--responsiveUnit) * 0.5);
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  color: var(--light);
+}
+
+button:active {
+  transform: scale(0.97);
+  color: var(--success);
+}
+
+#total {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#total.flip {
+  animation-name: flip;
+}
+
+#total.flip-alt {
+  animation-name: flip-alt;
+}
+
 @media (orientation: portrait) {
   h1 {
-    font-size: calc(var(--responsiveUnit) * 4);
+    font-size: calc(var(--responsiveUnit) * 3);
   }
 
   h2 {
-    font-size: calc(var(--responsiveUnit) * 3);
+    font-size: calc(var(--responsiveUnit) * 2);
+  }
+
+  .content {
+    padding: calc(var(--responsiveUnit) * 1);
+    width: calc(var(--responsiveUnit) * 30);
+    height: 100%;
+    margin-block: calc(var(--responsiveUnit) * 0.5);
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes flip-alt {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(360deg);
   }
 }

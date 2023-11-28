@@ -17,11 +17,33 @@
   </header>
 
   <main>
-    <input type="number" id="personal-money"> 
-    <input type="number" id="living-money"> 
-    <input type="number" id="extra-money">
-    <button onclick="calculate()">Calcul</button> 
-    <textarea id="total" readonly></textarea>
+    <div class="content">
+      <div class="customInput">
+        <label for="personal-money">Total Money</label>
+
+        <input type="number" id="personal-money">
+      </div>
+
+      <div class="customInput">
+        <label for="living-money">Living Money</label>
+
+        <input type="number" id="living-money">
+      </div>
+
+      <div class="customInput">
+        <label for="extra-money">Extra Money</label>
+
+        <input type="number" id="extra-money">
+      </div>
+
+      <button onclick="calculate()">Calculate</button>
+
+      <div class="customInput">
+        <label for="total">Total</label>
+
+        <input id="total" readonly>
+      </div>
+    </div>
   </main>
 
   <footer>
